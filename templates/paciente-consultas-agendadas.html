@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/pacientes.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Consultas Agendadas</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="menubar navbar navbar-light justify-content-between">
+            <a class="navbar-brand">LOGO</a>
+            <form class="form-inline">
+                <a href="/templates/paciente-consultas-agendadas.html"class="menu-items">CONSULTAS</a>
+                <a href="/templates/paciente-perfil.html"class="menu-items">MEU PERFIL</a>
+                <a href="/index"class="menu-items">SAIR</a>
+            </form>
+          </nav>
+    </header>
+
+    <div class="content">
+        <div class="form-background">
+            <center><h3><b>CONSULTAS AGENDADAS</b></h3></center>
+            <hr style="border-color: rgb(64 117 255);">
+            
+            <table class="table" id="tbEmpresas">
+                <thead>
+                    <tr>
+                        <th>DATA CONSULTA</th>
+                        <th>HORARIO</th>
+                        <th>ESPECIALIDADE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="agendamentos : ${agendamento}">
+                        <td th:text="${agendamentos.data}"></td>
+                        <td th:text="${agendamentos.horario}"></td>
+                        <td th:text="${agendamentos.especialidade}"></td>
+                    </tr>
+                  <!--  
+                    <tr>
+                        <td>12/12/2020</td>
+                        <td>15:00</td>
+                        <td>Dermatologista</td>
+                    </tr> 
+-->
+                </tbody>
+            </table>
+           
+        </div>
+    </div>
+
+    
+</body>
+</html>
