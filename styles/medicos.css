@@ -6,7 +6,7 @@
 .avatar{
     width: 150px;
     height: 150px;
-    background-image: url(../assets/medico.png);
+    background-image: url();
     background-size: 100%;
     background-color: #e7f2ff;
     border-radius: 5%;
@@ -20,6 +20,7 @@
     align-items: center;
     margin: 20px 0px 40px 50px;
 }
+
 .info{
     padding-left: 30px;
 }
