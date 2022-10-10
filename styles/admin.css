@@ -1,0 +1,36 @@
+:root{
+    --bg-admin: #1f252b;
+    --primary-admin: ;
+}
+
+img {
+    filter: brightness(90%);
+}
+
+.carousel-text{
+    font-size: 25px; 
+}
+
+.card{
+    margin: 0px 15px;
+    border: none;
+    height: 420px;
+}
+
+.card-body a{
+    font-weight: bold;
+}
+
+.card-title{
+    font-weight: bold;
+    color: #464646;
+    text-align: center;
+}
+
+.btn-card{
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
