@@ -1,18 +1,18 @@
 .content{
     padding: 50px 10%;
 }
-/*
+
 .avatar{
     width: 150px;
     height: 150px;
-    background-image: url();
+    background-image: url(/assets/paciente.png);
     background-size: 100%;
     background-color: #e7f2ff;
     border-radius: 5%;
     background-repeat: no-repeat;
     background-position: center;
 }
-*/
+
 
 .cabecalho{
     display: flex;

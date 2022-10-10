@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="/styles/pacientes.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Consultas Agendadas</title>
+    <title>consultas paciente</title>
 </head>
 <body>
-
     <header class="header">
         <nav class="menubar navbar navbar-light justify-content-between">
             <a class="navbar-brand">LOGO</a>
@@ -22,10 +21,9 @@
             </form>
           </nav>
     </header>
-
     <div class="content">
         <div class="form-background">
-            <center><h3><b>CONSULTAS AGENDADAS</b></h3></center>
+            <center><h3><b>CONSULTAS FUTURAS</b></h3></center>
             <hr style="border-color: rgb(64 117 255);">
             
             <table class="table" id="tbEmpresas">
@@ -33,28 +31,30 @@
                     <tr>
                         <th>DATA CONSULTA</th>
                         <th>HORARIO</th>
-                        <th>ESPECIALIDADE</th>
+                        <th>MEDICO</th>
+                        <th> - </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="agendamentos : ${agendamento}">
-                        <td th:text="${agendamentos.data}"></td>
-                        <td th:text="${agendamentos.horario}"></td>
-                        <td th:text="${agendamentos.especialidade}"></td>
+                    <tr>
+                        <td>20/01/2021</td>
+                        <td>14:00</td>
+                        <td>Dr. Otavio Cordeiro</td>
+                        <td><button class="btn btn-clin">MAIS INFORMAÇÕES</button></td>
                     </tr>
-                  
+                    
                     <tr>
                         <td>12/12/2020</td>
                         <td>15:00</td>
-                        <td>Dermatologista</td>
-                    </tr> 
+                        <td>Dr. Gabriel Ferraz</td>
+                        <td><button class="btn btn-clin">MAIS INFORMAÇÕES</button></td>
+                    </tr>
 
                 </tbody>
             </table>
            
         </div>
     </div>
-
     
 </body>
 </html>
