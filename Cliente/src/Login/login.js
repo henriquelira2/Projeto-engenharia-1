@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 
 function App() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   const handleLogin = (values) => {
     Axios.post("http://localhost:3001/login", {
@@ -94,7 +94,7 @@ function App() {
                   </div>
                   <div className="form-group">
                     <div className="col-md-15">
-                      <button type="submit" className="btn btn-secondary">
+                      <button type="submit" className="btn2 btn-secondary">
                         Login
                       </button>
                     </div>
