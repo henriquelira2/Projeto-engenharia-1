@@ -1,6 +1,6 @@
 import React from "react";
-import Login from "../Login/index";
-import Cadastro from "../Cadastro/index";
+import Login from "../Login/login";
+import Cadastro from "../Cadastro/cadastro";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 

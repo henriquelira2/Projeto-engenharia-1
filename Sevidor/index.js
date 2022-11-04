@@ -16,7 +16,7 @@ const db = mysql.createPool({
 app.use(express.json());
 app.use(cors());
 
-app.post("/register", (req, res) => {
+app.post("/Cadastro", (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
@@ -58,10 +58,7 @@ app.post("/login", (req, res) => {
           res.send(error);
         }
         if (response) {
-          res.send({ msg: "Usuário logado" },
-          
-          );
-          
+          res.send({ msg: "Usuário logado" });
         } else {
           res.send({ msg: "Senha incorreta" });
         }

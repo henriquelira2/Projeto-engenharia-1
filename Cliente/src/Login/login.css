@@ -1,8 +1,14 @@
+.main-head {
+    height: 150px;
+    background: #FFF;
+}
+
 h2 {
     margin-top: 1.94rem !important;
 }
 
-.h2,h2 {
+.h2,
+h2 {
     font-size: 3.1rem !important;
     font: sans-serig;
 }
@@ -20,12 +26,13 @@ p {
     overflow-x: hidden;
     padding-top: 20px;
 }
+
 .imglogin {
     height: 220px;
-    margin-top: -10px; 
+    margin-top: -10px;
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto
 }
 
 .main {
@@ -45,14 +52,10 @@ p {
 .btn {
     background-color: #4075FF !important;
     color: #fff;
-    width: 35% !important;
+    width: 25% !important;
     margin-top: 10px;
 }
 
-.btn-cargo {
-    width: 48% !important;
-    height: 38px;
-}
 
 @media screen and (min-width: 768px) {
     .main {
@@ -68,12 +71,10 @@ p {
     }
 
     .login-form {
-        margin-top: 80%;
-    }
-
-    .register-form {
         margin-top: 20%;
     }
+
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -90,10 +91,8 @@ p {
     }
 
     .login-form {
-        margin-top: 80%;
-    }
-
-    .register-form {
         margin-top: 20%;
     }
+
+
 }
