@@ -6,15 +6,18 @@ import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 
 function App() {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleLogin = (values) => {
     Axios.post("http://localhost:3001/login", {
       email: values.email,
       password: values.password,
     }).then((response) => {
-      alert(response.data.msg);
-      //navigate("/home");
+      if (response.data.msg === "Usuário logado") {
+        navigate("/home");
+      } else {
+        alert(response.data.msg);
+      }
     });
   };
 

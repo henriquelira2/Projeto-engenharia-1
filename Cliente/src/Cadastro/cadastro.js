@@ -59,7 +59,7 @@ function App() {
             <div className="form-background">
               <center>
                 <h3>
-                  <b>CADASTRO DE PACIENTE</b>
+                  <b>CADASTRO </b>
                 </h3>
               </center>
 

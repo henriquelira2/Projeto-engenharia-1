@@ -4,6 +4,7 @@ const mysql = require("mysql2");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
 
+
 const saltRounds = 10;
 
 const db = mysql.createPool({
@@ -59,6 +60,7 @@ app.post("/login", (req, res) => {
         }
         if (response) {
           res.send({ msg: "Usuário logado" });
+          
         } else {
           res.send({ msg: "Senha incorreta" });
         }
