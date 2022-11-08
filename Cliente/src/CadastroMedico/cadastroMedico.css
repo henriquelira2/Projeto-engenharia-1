@@ -9,6 +9,12 @@
     justify-content: center;
     align-items: center;
     background-color: var(--cor-primaria);
+    border-radius: 0px 0px 15px 15px;
+    width: 93%;
+    height: 85%;
+    left: 3%;
+    position: absolute;
+    top: 12%;
 }
 
 .header .menubar {
@@ -16,6 +22,12 @@
     padding-left: 30px;
     font-weight: bold;
     background-color: var(--bg-light);
+    background: #211e1e;
+    position: absolute;
+    width: 93%;
+    left: 3%;
+    top: 3%;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .btn-form {

@@ -2,6 +2,9 @@
     height: 150px;
     background: #FFF;
 }
+body{
+    background: #a1b6e5 !important;
+}
 
 h2 {
     margin-top: 1.94rem !important;
@@ -18,35 +21,49 @@ p {
     margin-bottom: 1rem;
     font-size: 1.4rem !important;
     font: sans-serig;
+    position: absolute;
+    top: 55%;
 }
 
 .sidenav {
-    height: 100%;
+
     background-color: #4075FF;
-    overflow-x: hidden;
-    padding-top: 20px;
+    /* overflow-x: hidden; */
+    padding-top: 0px;
+    width: 83%;
+    position: fixed;
+    top: 1%;
+    left: 5%;
+    border-radius: 15px 15px 0px 0px;
+    padding-top: 30px;
+
 }
 
-.imglogin {
-    height: 220px;
-    margin-top: -10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
+
 
 .main {
-    padding: 0px 10px;
+    padding: 70px 20px;
+    position: fixed;
+    top: 40%;
+    background: gray;
+    left: 5%;
+    width: 83%;
+    height: 57%;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .login-main-text {
     margin-top: 20%;
     padding: 60px;
     color: #fff;
+
 }
 
 .login-main-text h2 {
     font-weight: 300;
+    top: 8%;
+    position: absolute;
+
 }
 
 .btn2 {
@@ -56,18 +73,43 @@ p {
     margin-top: 10px;
 }
 
+.col-mb-6 {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 100%;
+
+}
 
 @media screen and (min-width: 768px) {
     .main {
         margin-left: 40%;
+        border-radius: 0px 15px 15px 0px;
+        background: #a8acb5;
+        width: 52%;
+        left: 10%;
+        position: fixed;
+        height: 90%;
+        top: 5%;
+
     }
 
+    .col-md-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 90% !important;
+    }
+
+
+
     .sidenav {
-        width: 35%;
+        width: 40%;
         position: fixed;
         z-index: 1;
-        top: 0;
-        left: 0;
+        top: 5%;
+        left: 10%;
+        height: 90%;
+        border-radius: 15px 0px 0px 15px;
     }
 
     .login-form {
@@ -80,14 +122,23 @@ p {
 @media screen and (min-width: 1024px) {
     .main {
         margin-left: 40%;
+        border-radius: 0px 15px 15px 0px;
+        background: #a8acb5;
+        width: 52%;
+        left: 5%;
+        position: fixed;
+        height: 90%;
+        top: 5%;
+
     }
 
     .sidenav {
         width: 35%;
         position: fixed;
         z-index: 1;
-        top: 0;
-        left: 0;
+        top: 5%;
+        left: 10%;
+        height: 90%;
     }
 
     .login-form {

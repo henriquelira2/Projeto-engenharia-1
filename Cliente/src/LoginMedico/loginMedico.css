@@ -21,10 +21,12 @@ p {
 }
 
 .sidenav {
-    height: 100%;
+    
     background-color: #4075FF;
     overflow-x: hidden;
     padding-top: 20px;
+    /*width: 45%;*/
+    
 }
 
 .imglogin {
@@ -63,11 +65,13 @@ p {
     }
 
     .sidenav {
-        width: 35%;
+        width: 40%;
         position: fixed;
         z-index: 1;
-        top: 0;
-        left: 0;
+        top: 5%;
+        left: 10%;
+        height: 90%;
+        border-radius: 15px 0px px 15px;
     }
 
     .login-form {
@@ -83,7 +87,7 @@ p {
     }
 
     .sidenav {
-        width: 35%;
+        width: 45%;
         position: fixed;
         z-index: 1;
         top: 0;
