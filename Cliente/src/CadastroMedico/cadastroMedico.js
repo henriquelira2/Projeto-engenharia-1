@@ -1,12 +1,12 @@
-import "./cadastro.css";
+import "./cadastroMedico.css";
 import * as yup from "yup";
 import { ErrorMessage, Formik, Form, Field } from "formik";
 import Axios from "axios";
 import { Link } from "react-router-dom";
 
 function App() {
-  const handleRegister = (values) => {
-    Axios.post("http://localhost:3001/Cadastro", {
+  const handleRegisterMedico = (values) => {
+    Axios.post("http://localhost:3002/CadastroMedico", {
       email: values.email,
       password: values.password,
     }).then((response) => {
@@ -15,7 +15,7 @@ function App() {
     });
   };
 
-  const validationsRegister = yup.object().shape({
+  const validationsRegisterMedico = yup.object().shape({
     email: yup
       .string()
       .email("email inválido")
@@ -34,8 +34,8 @@ function App() {
     <>
       <Formik
         initialValues={{}}
-        onSubmit={handleRegister}
-        validationSchema={validationsRegister}
+        onSubmit={handleRegisterMedico}
+        validationSchema={validationsRegisterMedico}
       >
         <Form>
           <link
@@ -49,7 +49,7 @@ function App() {
               <h1 className="navbar-brand">LOGO</h1>
               <div className="form-inline">
                 <div>
-                  <Link to="/login">Login</Link>
+                  <Link to="/loginMedico">Login</Link>
                 </div>
               </div>
             </nav>
@@ -59,7 +59,7 @@ function App() {
             <div className="form-background">
               <center>
                 <h3>
-                  <b>CADASTRO </b>
+                  <b>CADASTRO MEDICO</b>
                 </h3>
               </center>
 

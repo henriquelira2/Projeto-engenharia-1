@@ -1,7 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Login from "../Login/login";
-import Cadastro from "../Cadastro/cadastro";
+import LoginMedico from "../LoginMedico/loginMedico";
+import LoginPaciente from "../LoginPaciente/loginPaciente";
+
+import CadastroPaciente from "../CadastroPaciente/cadastroPaciente";
+import CadastroMedico from "../CadastroMedico/cadastroMedico";
 import Main from "../Main/Main";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,8 +14,10 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="*" element={<Main />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/loginMedico" element={<LoginMedico />} />
+        <Route path="/loginPaciente" element={<LoginPaciente />} />
+        <Route path="/cadastroPaciente" element={<CadastroPaciente />} />
+        <Route path="/cadastroMedico" element={<CadastroMedico />} />
         <Route path="/home" element={<h1> tela home</h1>} />
       </Routes>
     </Router>

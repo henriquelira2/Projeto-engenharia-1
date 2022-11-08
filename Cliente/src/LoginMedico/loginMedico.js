@@ -1,15 +1,15 @@
 import * as yup from "yup";
 import { ErrorMessage, Formik, Form, Field } from "formik";
 import Axios from "axios";
-import "./login.css";
+import "./loginMedico.css";
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
 
 function App() {
   const navigate = useNavigate();
 
-  const handleLogin = (values) => {
-    Axios.post("http://localhost:3001/login", {
+  const handleLoginMedico = (values) => {
+    Axios.post("http://localhost:3002/loginMedico", {
       email: values.email,
       password: values.password,
     }).then((response) => {
@@ -21,7 +21,7 @@ function App() {
     });
   };
 
-  const validationsLogin = yup.object().shape({
+  const validationsLoginMedico = yup.object().shape({
     email: yup
       .string()
       .email("email inválido")
@@ -36,8 +36,8 @@ function App() {
     <>
       <Formik
         initialValues={{}}
-        onSubmit={handleLogin}
-        validationSchema={validationsLogin}
+        onSubmit={handleLoginMedico}
+        validationSchema={validationsLoginMedico}
       >
         <Form className="login-form">
           <link
@@ -93,9 +93,9 @@ function App() {
                       className="form-error"
                     />
                     <br />
-                    <Link to="/Cadastro">Criar conta</Link>
+                    <Link to="/cadastroMedico">Criar conta</Link>
                   </div>
-                  <div className="form-group" >
+                  <div className="form-group">
                     <div className="col-md-15">
                       <button type="submit" className="btn2 btn-secondary">
                         Login
