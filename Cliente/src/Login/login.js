@@ -95,7 +95,7 @@ function App() {
                     <br />
                     <Link to="/Cadastro">Criar conta</Link>
                   </div>
-                  <div className="form-group">
+                  <div className="form-group" >
                     <div className="col-md-15">
                       <button type="submit" className="btn2 btn-secondary">
                         Login
