@@ -1,5 +1,6 @@
 import React from "react";
 import logo from '../Components/imgs/logo-Med-On192.png';
+import img from '../Components/imgs/logo-Med-On512.png';
 import { Button, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Main.css";
@@ -32,23 +33,50 @@ function App() {
                 </ul>
                 <ul className="css-bar-entrar">
                   <li className="css-entar">
-                    <a className="entrar" data-baseweb="button" href="link" target="_self" aria-label="Fazer login">
+                    <a className="entrar" data-baseweb="button" href="linkParaFazerLogin" target="_self" aria-label="Fazer login">
                       Já tem uma conta?
                     </a>
                   </li>
                 </ul>
               </div>
-              {/* <nav className="nav">
-            <img className="logo" src={logo} alt="logo Med-On" />
-            <h3 className="name">Med-On</h3>
-            <ul className="option">
-              <li><a className="link" href="#">Ajuda</a></li>
-              <li>|</li>
-              <li><button type="button" className="btn-link">Já tem uma conta?</button></li>
-            </ul>
-          </nav> */}
             </nav>
-
+            <div id="animation-wrpeer" className="css-main" data-baseweb="block">
+              <section id="" className="css-section" data-baseweb="block">
+                <div className="css-spUpDon" data-baseweb="block">
+                  <div className="css-spLefRig" data-baseweb="block">
+                    <div className="css-posTexImg" data-baseweb="block">
+                      <div className="css-mStTxt" data-baseweb="block">
+                        <div className="css-mFirtst">
+                          <div className="css-firTxt">
+                            <h1 className="css-txt">Marque uma consulta e seja entendido em casa.</h1>
+                          </div>
+                        </div>
+                        <div className="css-mPara">
+                          <div className="css-stPara">
+                            <p>Cadastre-se é marque sua consulta</p>
+                          </div>
+                        </div>
+                        <div className="css-mStBt">
+                          <div className="css-mBtReg">
+                            <a className="css-reg" data-baseweb="button" href="linkParaRegistro" target="_self" aria-label="Fazer Cadastre-se">
+                              Cadastre-se
+                            </a>
+                          </div>
+                          <div className="css-mBtEnt">
+                            <a className="css-entrar" data-baseweb="button" href="linkParaEntrar" target="_self" aria-label="Entrar">
+                              Já tem uma conta?
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="css-stImg">
+                        <img className="img" src={img}/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
           </main>
         </div>
       </div>
@@ -57,7 +85,15 @@ function App() {
 
 
 
-
+    /* <nav className="nav">
+                <img className="logo" src={logo} alt="logo Med-On" />
+                <h3 className="name">Med-On</h3>
+                <ul className="option">
+                  <li><a className="link" href="#">Ajuda</a></li>
+                  <li>|</li>
+                  <li><button type="button" className="btn-link">Já tem uma conta?</button></li>
+                </ul>
+              </nav> */
 
     /*     <>
           <div className="mainMain">
