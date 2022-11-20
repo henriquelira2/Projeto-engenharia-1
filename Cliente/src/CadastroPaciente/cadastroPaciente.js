@@ -46,7 +46,7 @@ function App() {
           />
           <header className="header">
             <nav className="menubar navbar navbar-light justify-content-between">
-              <h1 className="navbar-brand">LOGO</h1>
+              <h1 className="navbar-brand">-</h1>
               <div className="form-inline">
                 <div>
                   <Link to="/loginPaciente">Login</Link>
