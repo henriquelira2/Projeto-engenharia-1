@@ -73,7 +73,7 @@ function App() {
                         <div className="css-mFirtst">
                           <div className="css-firTxt">
                             <h1 className="css-txt">
-                              Marque uma consulta e seja entendido em casa.
+                              Marque uma consulta e seja atendido em casa.
                             </h1>
                           </div>
                           <div className="css-stPara">
