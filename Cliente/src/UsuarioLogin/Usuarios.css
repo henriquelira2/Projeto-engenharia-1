@@ -16,7 +16,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url("../../../imgMain.jpeg");
+    background-image: url("../../public/imgMain.jpeg");
     background-position: center;
     background-size: cover;
     margin-left: 0%;

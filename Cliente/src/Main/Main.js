@@ -87,7 +87,7 @@ function App() {
                             <a
                               className="css-reg"
                               data-baseweb="button"
-                              href="usuarioCadastro"
+                              href="/usuarioCadastro"
                               target="_self"
                               aria-label="Fazer Cadastre-se"
                             >
@@ -98,7 +98,7 @@ function App() {
                             <a
                               className="css-entrar"
                               data-baseweb="button"
-                              href="usuarioLogin"
+                              href="/usuarioLogin"
                               target="_self"
                               aria-label="Entrar"
                             >
