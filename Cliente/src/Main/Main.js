@@ -20,7 +20,7 @@ function App() {
                   <li className="css-logo">
                     <a
                       className="logo"
-                      data-baseweb="link"
+                      data-baseweb="main"
                       href="/"
                       target="_self"
                       aria-label="Acesse a página inicial do Med-On"
@@ -76,8 +76,6 @@ function App() {
                               Marque uma consulta e seja entendido em casa.
                             </h1>
                           </div>
-                        </div>
-                        <div className="css-mPara">
                           <div className="css-stPara">
                             <p>Cadastre-se é marque sua consulta</p>
                           </div>
