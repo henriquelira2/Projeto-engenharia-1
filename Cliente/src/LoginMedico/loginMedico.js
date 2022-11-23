@@ -14,7 +14,7 @@ function App() {
       password: values.password,
     }).then((response) => {
       if (response.data.msg === "Usuário logado") {
-        navigate("/home");
+        navigate("/consultasMarcadasM");
       } else {
         alert(response.data.msg);
       }

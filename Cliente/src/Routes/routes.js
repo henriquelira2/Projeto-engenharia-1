@@ -11,7 +11,9 @@ import Main from "../Main/Main";
 import Agendamento from "../Agendamento/agendamentoConsultas";
 
 import CadastrarConsulta from "../CadastrarConsulta/cadastrarConsulta";
-import ConsultasMarcadas from "../ConsultasMarcadas/consultasMarcadas";
+import ConsultasMarcadas from "../ConsultasMarcadasP/consultasMarcadas";
+
+import ConsultasMarcadasM from "../ConsultasMarcadasM/consultasMarcadasM";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -27,12 +29,13 @@ export default function App() {
 
         <Route path="/usuarioLogin" element={<UsuarioLogin />} />
         <Route path="/usuarioCadastro" element={<UsuarioCadastro />} />
-       
-        <Route path="/home" element={<h1> tela home</h1>} />
+
+        
         <Route path="/Agendamento" element={<Agendamento />} />
 
         <Route path="/cadastrarConsulta" element={<CadastrarConsulta />} />
         <Route path="/consultasMarcadas" element={<ConsultasMarcadas />} />
+        <Route path="/consultasMarcadasM" element={<ConsultasMarcadasM />} />
       </Routes>
     </Router>
   );
