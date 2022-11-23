@@ -77,7 +77,7 @@ function App() {
                             </h1>
                           </div>
                           <div className="css-stPara">
-                            <p>Cadastre-se é marque sua consulta</p>
+                            <b>Cadastre-se é marque sua consulta</b>
                           </div>
                         </div>
                         <div className="css-mStBt">

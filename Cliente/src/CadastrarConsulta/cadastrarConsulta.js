@@ -4,7 +4,6 @@ import Axios from "axios";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-
 function App() {
   const [tipo, setTipo] = useState("");
   const [endereco, setEndereco] = useState("");
@@ -117,14 +116,12 @@ function App() {
                       className="btn btn-clin"
                       value=""
                     >
-                      Cadastrar
+                      <Link to="/consultasMarcadas">Cadastrar</Link>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-
-           
           </div>
         </div>
       </Formik>

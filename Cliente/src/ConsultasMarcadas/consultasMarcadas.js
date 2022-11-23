@@ -69,7 +69,7 @@ function App() {
                             deletarConsulta(val.data);
                           }}
                         >
-                          Delete
+                          <Link to="/consultasMarcadas/">Delete</Link>
                         </button>
                       </div>
                     </div>

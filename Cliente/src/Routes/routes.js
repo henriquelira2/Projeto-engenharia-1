@@ -27,7 +27,7 @@ export default function App() {
 
         <Route path="/usuarioLogin" element={<UsuarioLogin />} />
         <Route path="/usuarioCadastro" element={<UsuarioCadastro />} />
-        <Route path="/main" element={<Main />} />
+       
         <Route path="/home" element={<h1> tela home</h1>} />
         <Route path="/Agendamento" element={<Agendamento />} />
 

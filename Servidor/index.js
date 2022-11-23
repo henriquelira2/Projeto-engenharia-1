@@ -12,6 +12,7 @@ const PORTP = 3002;
 const PORTC = 3003;
 
 const saltRounds = 10;
+/********************************************* Marca Consulta *************************************************************** */
 
 app.use(express.json());
 app.use(cors());
@@ -43,7 +44,7 @@ app.delete("/cadastrarConsulta:data", (req, res) => {
   const sqlDelete = "DELETE FROM consultas WHERE data = ?";
 
   dbConsultas.query(sqlDelete, consulta, (err, result) => {
-    if (err) console.log(err);
+     console.log(err);
   });
 });
 
@@ -56,7 +57,7 @@ app.put("/consultasMarcadas", (req, res) => {
   const sqlUpdate = "UPDATE consultas SET hora = ? WHERE data= ?";
 
   dbConsultas.query(sqlUpdate, [tipo, endereco, hora, data], (err, result) => {
-    if (err) console.log(result);
+   console.log(err);
   });
 });
 
