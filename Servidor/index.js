@@ -1,15 +1,77 @@
 const express = require("express");
 const app = express();
-const mysql = require("mysql2");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
+const bodyParser = require("body-Parser");
 const dbMedico = require("./config/dbMedico");
 const dbPaciente = require("./config/dbPaciente");
+const dbConsultas = require("./config/dbConsultas");
 
 const PORTM = 3001;
 const PORTP = 3002;
+const PORTC = 3003;
 
 const saltRounds = 10;
+
+app.use(express.json());
+app.use(cors());
+
+
+
+app.post("/cadastrarConsulta", (req, res) => {
+  const tipo = req.body.tipo;
+  const endereco = req.body.endereco;
+  const data = req.body.data;
+  const hora = req.body.hora;
+
+  const sqlInsert =
+    "INSERT INTO consultas (tipo,endereco,data,hora)VALUES (?,?,?,?)";
+
+  dbConsultas.query(sqlInsert, [tipo,endereco,data, hora], (err, result) => {
+    console.log(err);
+  });
+});
+
+app.get("/cadastrarConsulta", (req, res) => {
+  const sqlSelect = "SELECT * FROM consultas";
+
+  dbConsultas.query(sqlSelect, (err, result) => {
+    res.send(result);
+  });
+});
+app.delete("/cadastrarConsulta:data", (req, res) => {
+  const consulta = req.params.data;
+
+  const sqlDelete = "DELETE FROM consultas WHERE data = ?";
+
+  dbConsultas.query(sqlDelete, consulta, (err, result) => {
+    if (err) console.log(err);
+  });
+});
+
+app.put("/consultasMarcadas", (req, res) => {
+  const data = req.body.data;
+  const hora = req.body.hora;
+  const tipo = req.body.tipo;
+  const endereco = req.body.endereco;
+
+  const sqlUpdate = "UPDATE consultas SET hora = ? WHERE data= ?";
+
+  dbConsultas.query(sqlUpdate, [tipo, endereco, hora, data], (err, result) => {
+    if (err) console.log(result);
+  });
+});
+
+
+
+
+
+
+
+
+app.listen(process.env.PORTC || PORTC, () => {
+  console.log(`Servidor Rodando na porta ${PORTC}`);
+});
 
 /********************************************* Paceinte *************************************************************** */
 

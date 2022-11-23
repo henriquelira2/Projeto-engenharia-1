@@ -5,6 +5,7 @@ import Axios from "axios";
 import { Link } from "react-router-dom";
 
 function App() {
+  
   const handleRegisterMedico = (values) => {
     Axios.post("http://localhost:3002/CadastroMedico", {
       email: values.email,

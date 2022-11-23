@@ -5,12 +5,13 @@ import LoginPaciente from "../LoginPaciente/loginPaciente";
 import UsuarioLogin from "../UsuarioLogin/UsuarioLogin";
 import UsuarioCadastro from "../UsuarioCadastro/UsuarioCadastro";
 
-
-
 import CadastroPaciente from "../CadastroPaciente/cadastroPaciente";
 import CadastroMedico from "../CadastroMedico/cadastroMedico";
 import Main from "../Main/Main";
 import Agendamento from "../Agendamento/agendamentoConsultas";
+
+import CadastrarConsulta from "../CadastrarConsulta/cadastrarConsulta";
+import ConsultasMarcadas from "../CadastrarConsulta copy/consultasMarcadas";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -29,6 +30,9 @@ export default function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/home" element={<h1> tela home</h1>} />
         <Route path="/Agendamento" element={<Agendamento />} />
+
+        <Route path="/cadastrarConsulta" element={<CadastrarConsulta />} />
+        <Route path="/consultasMarcadas" element={<ConsultasMarcadas />} />
       </Routes>
     </Router>
   );
