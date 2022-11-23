@@ -11,7 +11,7 @@ import Main from "../Main/Main";
 import Agendamento from "../Agendamento/agendamentoConsultas";
 
 import CadastrarConsulta from "../CadastrarConsulta/cadastrarConsulta";
-import ConsultasMarcadas from "../CadastrarConsulta copy/consultasMarcadas";
+import ConsultasMarcadas from "../ConsultasMarcadas/consultasMarcadas";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
