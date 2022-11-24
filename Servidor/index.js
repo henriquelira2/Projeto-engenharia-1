@@ -7,10 +7,6 @@ const dbMedico = require("./config/dbMedico");
 const dbPaciente = require("./config/dbPaciente");
 const dbConsultas = require("./config/dbConsultas");
 
-const PORTM = 3001;
-const PORTP = 3002;
-const PORTC = 3003;
-
 const saltRounds = 10;
 /********************************************* Marca Consulta *************************************************************** */
 
@@ -61,8 +57,12 @@ app.put("/consultasMarcadas", (req, res) => {
   });
 });
 
-app.listen(process.env.PORTC || PORTC, () => {
-  console.log(`Servidor Rodando na porta ${PORTC}`);
+app.listen(process.env.PORT , function () {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
 });
 
 /********************************************* Paceinte *************************************************************** */
@@ -131,8 +131,12 @@ app.post("/loginPaciente", (req, res) => {
   );
 });
 
-app.listen(process.env.PORTP || PORTP, () => {
-  console.log(`Servidor Rodando na porta ${PORTP}`);
+app.listen(process.env.PORT , function () {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
 });
 /*******************************************Paceiente***************************************************************** */
 
@@ -202,8 +206,12 @@ app.post("/loginMedico", (req, res) => {
   );
 });
 
-app.listen(process.env.PORTM || PORTM, () => {
-  console.log(`Servidor Rodando na porta ${PORTM}`);
+app.listen(process.env.PORT , function () {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
 });
 
 /*******************************************Medico***************************************************************** */
