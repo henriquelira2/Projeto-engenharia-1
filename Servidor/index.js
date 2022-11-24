@@ -44,7 +44,7 @@ app.delete("/cadastrarConsulta:data", (req, res) => {
   const sqlDelete = "DELETE FROM consultas WHERE data = ?";
 
   dbConsultas.query(sqlDelete, consulta, (err, result) => {
-     console.log(err);
+    console.log(result);
   });
 });
 
@@ -57,7 +57,7 @@ app.put("/consultasMarcadas", (req, res) => {
   const sqlUpdate = "UPDATE consultas SET hora = ? WHERE data= ?";
 
   dbConsultas.query(sqlUpdate, [tipo, endereco, hora, data], (err, result) => {
-   console.log(err);
+    console.log(result);
   });
 });
 
@@ -75,7 +75,7 @@ app.post("/CadastroPaciente", (req, res) => {
   const password = req.body.password;
 
   dbPaciente.query(
-    "SELECT * FROM pacientes WHERE email = ?",
+    "SELECT * FROM paciente WHERE email = ?",
     [email],
     (err, result) => {
       if (err) {
@@ -84,7 +84,7 @@ app.post("/CadastroPaciente", (req, res) => {
       if (result.length == 0) {
         bcrypt.hash(password, saltRounds, (err, hash) => {
           dbPaciente.query(
-            "INSERT INTO pacientes (email, password) VALUE (?,?)",
+            "INSERT INTO paciente (email, password) VALUE (?,?)",
             [email, hash],
             (error, response) => {
               if (err) {
@@ -107,7 +107,7 @@ app.post("/loginPaciente", (req, res) => {
   const password = req.body.password;
 
   dbPaciente.query(
-    "SELECT * FROM pacientes WHERE email = ?",
+    "SELECT * FROM paciente WHERE email = ?",
     [email],
     (err, result) => {
       if (err) {
@@ -146,7 +146,7 @@ app.post("/CadastroMedico", (req, res) => {
   const password = req.body.password;
 
   dbMedico.query(
-    "SELECT * FROM medicos WHERE email = ?",
+    "SELECT * FROM medico WHERE email = ?",
     [email],
     (err, result) => {
       if (err) {
@@ -155,7 +155,7 @@ app.post("/CadastroMedico", (req, res) => {
       if (result.length == 0) {
         bcrypt.hash(password, saltRounds, (err, hash) => {
           dbMedico.query(
-            "INSERT INTO medicos (email, password) VALUE (?,?)",
+            "INSERT INTO medico (email, password) VALUE (?,?)",
             [email, hash],
             (error, response) => {
               if (err) {
@@ -178,7 +178,7 @@ app.post("/loginMedico", (req, res) => {
   const password = req.body.password;
 
   dbMedico.query(
-    "SELECT * FROM medicos WHERE email = ?",
+    "SELECT * FROM medico WHERE email = ?",
     [email],
     (err, result) => {
       if (err) {

@@ -4,7 +4,7 @@ const dbMedico = mysql.createPool({
   host: "localhost",
   user: "root",
   password: "root",
-  database: "medico",
+  database: "medon",
 });
 
 module.exports = dbMedico;
