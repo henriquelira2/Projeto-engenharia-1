@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 function App() {
   const [listaDeConsultasM, setListaDeConsultasM] = useState([]);
 
-    useEffect(() => {
+  useEffect(() => {
     Axios.get("https://medonback.herokuapp.com/cadastrarConsulta/").then(
       (response) => {
         setListaDeConsultasM(response.data);
@@ -31,12 +31,10 @@ function App() {
           />
           <header className="header">
             <nav className="menubar navbar navbar-light justify-content-between">
-              <h1 className="navbar-brand">
-                <Link to="/">-</Link>
-              </h1>
+              <h1 className="navbar-brand">.</h1>
               <div className="form-inline">
                 <div>
-                  <Link to="/"> Sair</Link>
+                  <Link to="/loginMedico"> Sair</Link>
                 </div>
               </div>
             </nav>
@@ -71,7 +69,12 @@ function App() {
                             deletarConsulta(val.data);
                           }}
                         >
-                          <Link to="/consultasMarcadas">Desmarcar</Link>
+                          <Link
+                            to="/consultasMarcadas"
+                            onClick="window.location.reload()"
+                          >
+                            Desmarcar
+                          </Link>
                         </button>
                       </div>
                     </div>

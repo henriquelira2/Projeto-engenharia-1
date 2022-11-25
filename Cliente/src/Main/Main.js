@@ -32,19 +32,7 @@ function App() {
                   </li>
                 </ul>
                 <ul className="css-bar-space"></ul>
-                <ul className="css-bar-help">
-                  <li className="css-help">
-                    <a
-                      className="help"
-                      data-baseweb="link"
-                      href="/"
-                      target="_self"
-                      aria-label="Acesse a página de ajuda do Med-On"
-                    >
-                      Ajuda
-                    </a>
-                  </li>
-                </ul>
+
                 <ul className="css-bar-entrar">
                   <li className="css-entar">
                     <a

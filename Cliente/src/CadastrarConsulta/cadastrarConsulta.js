@@ -11,7 +11,7 @@ function App() {
   const [hora, setHora] = useState("");
   const [listaDeConsultasM, setListaDeConsultasM] = useState([]);
 
-   useEffect(() => {
+  useEffect(() => {
     Axios.get("https://medonback.herokuapp.com/cadastrarConsulta/").then(
       (response) => {
         setListaDeConsultasM(response.data);
@@ -44,10 +44,12 @@ function App() {
           />
           <header className="header">
             <nav className="menubar navbar navbar-light justify-content-between">
-              <h1 className="navbar-brand">-</h1>
+              <h1 className="navbar-brand">
+                <Link to="/consultasMarcadas">Consultas Marcadas</Link>
+              </h1>
               <div className="form-inline">
                 <div>
-                  <Link to="/consultasMarcadas">Consultas Marcadas</Link>
+                  <Link to="/loginPaciente">sair</Link>
                 </div>
               </div>
             </nav>
@@ -118,7 +120,13 @@ function App() {
                       className="btn btn-clin"
                       value=""
                     >
-                      <Link to="/consultasMarcadas">Cadastrar</Link>
+                      <Link
+                        onClick="window.location.reload(true)"
+                        to="/consultasMarcadas
+                      "
+                      >
+                        Cadastra r
+                      </Link>
                     </button>
                   </div>
                 </div>

@@ -32,11 +32,11 @@ function App() {
           <header className="header">
             <nav className="menubar navbar navbar-light justify-content-between">
               <h1 className="navbar-brand">
-                <Link to="/">-</Link>
+                <Link to="/cadastrarConsulta">Marca Consulta</Link>
               </h1>
               <div className="form-inline">
                 <div>
-                  <Link to="/cadastrarConsulta">Marca Consulta</Link>
+                  <Link to="/loginPaciente">sair</Link>
                 </div>
               </div>
             </nav>
@@ -71,7 +71,12 @@ function App() {
                             deletarConsulta(val.data);
                           }}
                         >
-                          <Link to="/consultasMarcadas/">Delete</Link>
+                          <Link
+                            to="/consultasMarcadas/"
+                            onClick="window.location.reload()"
+                          >
+                            Delete
+                          </Link>
                         </button>
                       </div>
                     </div>

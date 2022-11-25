@@ -2,7 +2,8 @@
     height: 150px;
     background: #FFF;
 }
-body{
+
+body {
     background: #a1b6e5 !important;
 }
 
@@ -28,7 +29,6 @@ p {
 .sidenav {
 
     background-color: #4075FF;
-    /* overflow-x: hidden; */
     padding-top: 0px;
     width: 83%;
     position: fixed;
@@ -45,7 +45,7 @@ p {
     padding: 70px 20px;
     position: fixed;
     top: 40%;
-    background: gray;
+    background: #fff;
     left: 5%;
     width: 83%;
     height: 57%;
@@ -84,7 +84,7 @@ p {
     .main {
         margin-left: 40%;
         border-radius: 0px 15px 15px 0px;
-        background: #a8acb5;
+        background: #fff;
         width: 52%;
         left: 10%;
         position: fixed;
@@ -123,7 +123,7 @@ p {
     .main {
         margin-left: 40%;
         border-radius: 0px 15px 15px 0px;
-        background: #a8acb5;
+        background: #fff;
         width: 52%;
         left: 5%;
         position: fixed;
