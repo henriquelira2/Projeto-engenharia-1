@@ -9,7 +9,7 @@ function App() {
   const navigate = useNavigate();
 
   const handleLogin = (values) => {
-    Axios.post("http://localhost:3002/loginPaciente", {
+    Axios.post("https://medonback.herokuapp.com/loginPaciente", {
       email: values.email,
       password: values.password,
     }).then((response) => {

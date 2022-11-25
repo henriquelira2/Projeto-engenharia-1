@@ -1,8 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const bcrypt = require("bcrypt");
-const bodyParser = require("body-Parser");
+const bcrypt = require("bcryptjs");
 const dbMedico = require("./config/dbMedico");
 const dbPaciente = require("./config/dbPaciente");
 const dbConsultas = require("./config/dbConsultas");
@@ -34,15 +33,6 @@ app.get("/cadastrarConsulta", (req, res) => {
     res.send(result);
   });
 });
-app.delete("/cadastrarConsulta:data", (req, res) => {
-  const consulta = req.params.data;
-
-  const sqlDelete = "DELETE FROM consultas WHERE data = ?";
-
-  dbConsultas.query(sqlDelete, consulta, (err, result) => {
-    console.log(result);
-  });
-});
 
 app.put("/consultasMarcadas", (req, res) => {
   const data = req.body.data;
@@ -57,12 +47,14 @@ app.put("/consultasMarcadas", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT , function () {
-  console.log(
-    "Express server listening on port %d in %s mode",
-    this.address().port,
-    app.settings.env
-  );
+app.delete("/cadastrarConsulta/:data", (req, res) => {
+  const consulta = req.params.data;
+
+  const sqlDelete = "DELETE FROM consultas WHERE data = ?";
+
+  dbConsultas.query(sqlDelete, consulta, (err, result) => {
+    if (err) console.log(err);
+  });
 });
 
 /********************************************* Paceinte *************************************************************** */
@@ -131,13 +123,6 @@ app.post("/loginPaciente", (req, res) => {
   );
 });
 
-app.listen(process.env.PORT , function () {
-  console.log(
-    "Express server listening on port %d in %s mode",
-    this.address().port,
-    app.settings.env
-  );
-});
 /*******************************************Paceiente***************************************************************** */
 
 /*******************************************Medico***************************************************************** */
@@ -206,7 +191,7 @@ app.post("/loginMedico", (req, res) => {
   );
 });
 
-app.listen(process.env.PORT , function () {
+app.listen(process.env.PORT || 5000 || 5001 || 5002, function () {
   console.log(
     "Express server listening on port %d in %s mode",
     this.address().port,
