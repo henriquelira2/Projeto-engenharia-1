@@ -4,6 +4,7 @@ import Axios from "axios";
 import "./loginMedico.css";
 import { Link, useNavigate } from "react-router-dom";
 import React from "react";
+import img from "../Components/imgs/medico.png";
 
 function App() {
   const navigate = useNavigate();
@@ -50,11 +51,17 @@ function App() {
           <div className="sidenav">
             <div className="login-main-text">
               <h2>
-                <b>Mad-On</b>
-                <br />
+                <b>Login Medico</b>
               </h2>
-              <p></p>
-              <p>Sistema de marcações de Consultas</p>
+
+              <center>
+                <img
+                  src={img}
+                  alt="icone Medico"
+                  width="300"
+                  height="300"
+                ></img>
+              </center>
             </div>
           </div>
 
