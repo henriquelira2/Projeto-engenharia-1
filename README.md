@@ -66,7 +66,6 @@ Projeto criado no intuito de criar uma aplicação web voltado para serviços me
 ### Front-end
 - `React JS`
 - `Bootstrap`
-- `HTML5`
 - `CSS`
 - `formik`
 - `yup`
