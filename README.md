@@ -22,7 +22,7 @@ Projeto criado no intuito de criar uma aplicação web voltado para serviços me
   <h4> Cadastrar Consulta Medica</h4>
     <a href="/">
     <img 
-          src="Cliente/src/Components/readme/CadastrarConsulta.png" 
+          src="Cliente/src/Components/readme/cadastrarConsulta.png" 
           alt="Everything Is AWESOME" 
           style="width:100%;">
   </a>
