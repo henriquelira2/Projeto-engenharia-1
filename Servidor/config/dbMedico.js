@@ -1,10 +1,10 @@
 const mysql = require("mysql2");
 
 const dbMedico = mysql.createPool({
-  host: "us-cdbr-east-06.cleardb.net",
-  user: "b8cb12b2b477b6",
-  password: "da0fa92b",
-  database: "heroku_42fefdd42ae4f46",
+  host: "localhost", //porta
+  user: "root",
+  password: "root",
+  database: "medon", //name schema
 });
 
 module.exports = dbMedico;

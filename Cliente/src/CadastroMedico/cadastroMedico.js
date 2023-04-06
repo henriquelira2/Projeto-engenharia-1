@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function App() {
   
   const handleRegisterMedico = (values) => {
-    Axios.post("https://medonback.herokuapp.com/CadastroMedico", {
+    Axios.post("http://localhost:3002/CadastroMedico", {
       email: values.email,
       password: values.password,
     }).then((response) => {

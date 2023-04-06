@@ -7,6 +7,11 @@ const dbPaciente = require("./config/dbPaciente");
 const dbConsultas = require("./config/dbConsultas");
 
 const saltRounds = 10;
+
+const PORTM = 3001;
+const PORTP = 3002;
+const PORTC = 3003;
+
 /********************************************* Marca Consulta *************************************************************** */
 
 app.use(express.json());
@@ -191,12 +196,15 @@ app.post("/loginMedico", (req, res) => {
   );
 });
 
-app.listen(process.env.PORT || 5000 || 5001 || 5002, function () {
-  console.log(
-    "Express server listening on port %d in %s mode",
-    this.address().port,
-    app.settings.env
-  );
+
+app.listen(process.env.PORTC || PORTC, () => {
+  console.log(`Servidor Rodando na porta ${PORTC}`);
+});
+app.listen(process.env.PORTP || PORTP, () => {
+  console.log(`Servidor Rodando na porta ${PORTP}`);
+});
+app.listen(process.env.PORTM || PORTM, () => {
+  console.log(`Servidor Rodando na porta ${PORTM}`);
 });
 
 /*******************************************Medico***************************************************************** */
